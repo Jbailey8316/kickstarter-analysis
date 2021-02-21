@@ -7,14 +7,15 @@ By using MS Excel to interept the kickstater data I was able to organize and ext
 Once compiled I was able to determine the most likely scenarios of a successful campaign including details like the importance of launch date and goal setting.  Once collected; this information was used to create graphs to visually track and easily interpret the trends.  This was done using excels graphing features.  The below graph details the importance of a good launch date.  
 ---
 **Outcomes Based on Launch Date**
-![](https://github.com/Jbailey8316/kickstarter-analysis/blob/main/Theater_Outcomes_vs_Launch.png)
+![Outcomes Based on Launch Date](https://github.com/Jbailey8316/kickstarter-analysis/blob/main/resources/Theater_Outcomes_vs_Launch.png)
 ---
 From our collected data we can assess that a launch date in May would be most likely to succeed based on the trends set by past kickstarters.
 ---
 Furthermore, the goal set for the kickstarter seems to play a role in its success as well.  Having a good estimate of where to set the goal is crucial in attaining succesful funding for the project.  From the graph below we can estimate that projects ranging from $1000 to roughly $5000 tend to get successfully funded.
 ---
 **Outcomes Based on Goals**
-![Outcomes Based on Goals](https://github.com/Jbailey8316/kickstarter-analysis/blob/main/Outcomes_vs_Goals.png)
+---
+![Outcomes Based on Goals](https://github.com/Jbailey8316/kickstarter-analysis/blob/main/resources/Outcomes_vs_Goals.png)
 ---
 ---
 One of the challenges I came across was organizing the data based on the goal ranges.  I had some difficulty in getting the goal ranges to work within my excel formula.  For example: "=COUNTIFS(Kickstarter!$F$77:$F$4115,"successful",Kickstarter!$R$77:$R$4115,"plays",Kickstarter!$D$77:$D$4115,<1000)" would return an error.  I decided to create 2 seperate columns to set my criteria for the goal ranges under the "J" and "K" columns.  I then populated the new columns with my ranges.  For example range "J3" conatins ">=1000 and range "K3" conatins "<5000".  This altered my formula to: "=COUNTIFS(Kickstarter!$F$77:$F$4115,"successful",Kickstarter!$R$77:$R$4115,"plays",Kickstarter!$D$77:$D$4115,$J$3,Kickstarter!$D$77:$D$4115,$K$3)".  This work around fixed my error and I then decided to hide the columns for presentation.
